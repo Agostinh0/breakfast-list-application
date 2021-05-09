@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,6 +20,7 @@ import br.com.mv.breakfast.repository.ItemRepository;
 
 @RestController
 @RequestMapping("/listaCafeDaManha/itens")
+@CrossOrigin(origins="https://breakfast-list-ui.herokuapp.com", maxAge = 3600)
 public class ItemController {
 	
 	@Autowired
